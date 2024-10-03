@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1727918160 source:c:\projects\opengl-exercises\glfw_basico\main.cpp
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	<stdio.h>
+
+1584277261 c:\glew-2.2.0\include\gl\glew.h
+	<cstddef>
+	<cstdint>
+	<stddef.h>
+	<stdint.h>
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+
+1708700017 c:\glfw-3.4.bin.win64\include\glfw\glfw3.h
+	<stddef.h>
+	<stdint.h>
+	<vulkan/vulkan.h>
+	<GLES/gl.h>
+	<GLES/glext.h>
+	<GLES2/gl2.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl3.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl31.h>
+	<GLES2/gl2ext.h>
+	<GLES3/gl32.h>
+	<GLES2/gl2ext.h>
+	<OpenGL/gl3.h>
+	<OpenGL/gl3ext.h>
+	<GL/glcorearb.h>
+	<GL/glext.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
+	<OpenGL/gl.h>
+	<GL/gl.h>
+	<GL/glext.h>
+
