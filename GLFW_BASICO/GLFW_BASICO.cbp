@@ -13,9 +13,9 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="c:/glfw-3.2.2.bin.WIN64/include" />
-					<Add directory="c:/glfw3.2.2/deps" />
-					<Add directory="c:/glew-2.1.0/include" />
+					<Add directory="c:/glfw-3.4.bin.WIN64/include" />
+					<Add directory="c:/glfw3.4/deps" />
+					<Add directory="c:/glew-2.2.0/include" />
 				</Compiler>
 				<Linker>
 					<Add library="C:/glfw-3.4.bin.WIN64/lib-mingw-w64/libglfw3.a" />
