@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1727918160 source:c:\projects\opengl-exercises\glfw_basico\main.cpp
+1728428276 source:c:\projects\opengl-exercises\glfw_basico\main.cpp
 	<GL/glew.h>
 	<GLFW/glfw3.h>
 	<stdio.h>
@@ -40,4 +40,13 @@
 	<OpenGL/gl.h>
 	<GL/gl.h>
 	<GL/glext.h>
+
+1501501581 c:\glew-2.1.0\include\gl\glew.h
+	<stddef.h>
+	<inttypes.h>
+	<stdint.h>
+	<inttypes.h>
+	<Availability.h>
+	<OpenGL/glu.h>
+	<GL/glu.h>
 
