@@ -12,25 +12,23 @@ static void key_callback(GLFWwindow* window, int key, int scancode, int action, 
     }
 }
 
-// Function to draw a yellow pentagon
 void drawPentagon(float radius)
 {
-    const int numSides = 5;  // Pentagon has 5 sides
-    const float angleIncrement = 2.0f * M_PI / numSides; // Angle between each vertex
+    const int numSides = 5;
+    const float angleIncrement = 2.0f * M_PI / numSides;
 
-    glColor3f(1.0f, 1.0f, 0.0f); // Set the color to yellow (RGB: 1, 1, 0)
+    glColor3f(1.0f, 1.0f, 0.0f);
 
-    glBegin(GL_POLYGON); // Start drawing the pentagon
+    glBegin(GL_POLYGON);
 
-    // Generate the vertices of the pentagon
     for (int i = 0; i < numSides; i++) {
         float angle = i * angleIncrement;
-        float x = radius * cos(angle); // X coordinate
-        float y = radius * sin(angle); // Y coordinate
-        glVertex2f(x, y);  // Set the vertex
+        float x = radius * cos(angle);
+        float y = radius * sin(angle);
+        glVertex2f(x, y);
     }
 
-    glEnd(); // End drawing the pentagon
+    glEnd();
 }
 
 int main(void)
@@ -72,20 +70,15 @@ int main(void)
     // Main rendering loop
     while (!glfwWindowShouldClose(window))
     {
-        // Clear the color buffer
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // Draw a yellow pentagon with a radius of 0.5
         drawPentagon(0.5f);
 
-        // Swap front and back buffers
         glfwSwapBuffers(window);
 
-        // Poll for and process events
         glfwPollEvents();
     }
 
-    // Clean up and terminate GLFW
     glfwTerminate();
     return 0;
 }
