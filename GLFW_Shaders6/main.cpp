@@ -24,8 +24,8 @@ std::string TITULO = "GLFW Básico : Shaders 6";
 //std::string SHADER = "shaders/HappyJumping.glsl";
 //std::string SHADER = "shaders/Challenge.glsl";
 //std::string SHADER = "shaders/Zero.glsl";
-std::string SHADER = "shaders/AbstractCorridor.glsl";
-//std::string SHADER = "shaders/Buoy.glsl";
+//std::string SHADER = "shaders/AbstractCorridor.glsl";
+std::string SHADER = "shaders/Buoy.glsl";
 
 
 unsigned int u_time;
@@ -232,12 +232,12 @@ int main(void)
 
     // Carrega a textura
     //loadTexture("res/images/gremio.jpg",0);
-    loadTexture("res/images/gremio.png",0,PNG);
+    //loadTexture("res/images/gremio.png",0,PNG);
     //loadTexture("res/images/inter-320x320.png",0,PNG);
     //loadTexture("res/images/inter-512x512.png",0,PNG);
     //loadTexture("res/images/rgba_noise.png",0);
     //loadTexture("res/images/32-100-80.png",1,PNG);
-    //loadTexture("res/images/noise.png",1,PNG);
+    loadTexture("res/images/noise.png",1,PNG);
     //loadTexture("res/images/noise-256.png",1,PNG);
     //loadTexture("res/images/gremio2.jpg",0);
 
