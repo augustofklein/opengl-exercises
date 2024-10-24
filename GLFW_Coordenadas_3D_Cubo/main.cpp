@@ -14,6 +14,14 @@ void processInput(GLFWwindow *window);
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
+glm::vec3 cameraPos = glm::vec3(0.0f, 0.0f, 3.0f);
+glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
+glm::vec3 cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+
+float sensitivity = 0.1f;
+float yaw = -90.0f;
+float pitch = 0.0f;
+
 int main()
 {
     // glfw: initialize and configure
@@ -217,7 +225,7 @@ int main()
         model = glm::rotate(model, (float)0, glm::vec3(0.0f, 0.0f, 0.5f));
         // model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.0f, -0.5f, 0.0f));
         // model = glm::rotate(model, (float)glfwGetTime(), glm::vec3(0.5f, 0.5f, -0.5f));
-        //view  = glm::translate(view, glm::vec3(0.0f, 0.0f, -3.0f));
+        view  = glm::lookAt(cameraPos, cameraPos + cameraFront, cameraUp);
         projection = glm::perspective(glm::radians(45.0f), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
         // retrieve the matrix uniform locations
         unsigned int modelLoc = glGetUniformLocation(ourShader.ID, "model");
@@ -249,12 +257,49 @@ int main()
     return 0;
 }
 
+void viraCamera(float x, float y)
+{
+     yaw += x * sensitivity;
+     pitch += y * sensitivity;
+     if(pitch > 89.0f)
+     pitch = 89.0f;
+     if(pitch < -89.0f)
+     pitch = -89.0f;
+     glm::vec3 direction;
+     direction.x = cos(glm::radians(yaw)) * cos(glm::radians(pitch));
+     direction.y = sin(glm::radians(pitch));
+     direction.z = sin(glm::radians(yaw)) * cos(glm::radians(pitch));
+     cameraFront = glm::normalize(direction);
+}
+
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
 void processInput(GLFWwindow *window)
 {
+    const float cameraSpeed = 0.05f;
+
     if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
         glfwSetWindowShouldClose(window, true);
+    if (glfwGetKey(window, GLFW_KEY_W) == GLFW_PRESS)
+        cameraPos += cameraSpeed * cameraFront;
+    if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
+        cameraPos -= cameraSpeed * cameraFront;
+    if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
+        cameraPos -= glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
+        cameraPos += glm::normalize(glm::cross(cameraFront, cameraUp)) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_UP) == GLFW_PRESS)
+        viraCamera(0.0f, 1.0f);
+    if (glfwGetKey(window, GLFW_KEY_DOWN) == GLFW_PRESS)
+        viraCamera(0.0f, -1.0f);
+    if (glfwGetKey(window, GLFW_KEY_LEFT) == GLFW_PRESS)
+        viraCamera(-1.0f, 0.0f);
+    if (glfwGetKey(window, GLFW_KEY_RIGHT) == GLFW_PRESS)
+        viraCamera(1.0f, 0.0f);
+    if (glfwGetKey(window, GLFW_KEY_Q) == GLFW_PRESS)
+        cameraPos += glm::vec3(0.0f, 1.0f, 0.0f) * cameraSpeed;
+    if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS)
+        cameraPos += glm::vec3(0.0f, -1.0f, 0.0f) * cameraSpeed;
 }
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
