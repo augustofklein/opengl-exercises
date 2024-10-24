@@ -60,7 +60,7 @@
 	<intrin.h>
 	<arm_neon.h>
 
-1729125035 source:c:\projects\opengl-exercises\glfw_coordenadas_3d_cubo\main.cpp
+1729729324 source:c:\projects\opengl-exercises\glfw_coordenadas_3d_cubo\main.cpp
 	<GL/glew.h>
 	<GLFW/glfw3.h>
 	<stb_image.h>
