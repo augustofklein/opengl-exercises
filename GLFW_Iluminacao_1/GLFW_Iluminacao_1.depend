@@ -1,18 +1,8 @@
 # depslib dependency file v1.0
-1603578673 source:/home/krohn/LinguagemC/GLFW_Coordenadas_3D_Cubo/main.cpp
-	<GL/glew.h>
-	<GLFW/glfw3.h>
-	<stb_image.h>
-	<glm/glm.hpp>
-	<glm/gtc/matrix_transform.hpp>
-	<glm/gtc/type_ptr.hpp>
-	<Shader.h>
-	<iostream>
+1603045934 source:/home/krohn/LinguagemC/GLFW_Iluminacao_1/stb_image.cpp
+	"stb_image.h"
 
-1601601638 /home/krohn/LinguagemC/GLFW_Coordenadas_3D_Cubo/include/glad/glad.h
-	<KHR/khrplatform.h>
-
-1603045863 /home/krohn/LinguagemC/GLFW_Coordenadas_3D_Cubo/include/stb_image.h
+1603045863 /home/krohn/LinguagemC/GLFW_Iluminacao_1/stb_image.h
 	"stb_image.h"
 	<stdio.h>
 	<stdlib.h>
@@ -29,48 +19,17 @@
 	<intrin.h>
 	<arm_neon.h>
 
-1603120690 /home/krohn/LinguagemC/GLFW_Coordenadas_3D_Cubo/include/Shader.h
-	<GL/glew.h>
-	<glm/glm.hpp>
-	<string>
-	<fstream>
-	<sstream>
-	<iostream>
-
-1603045934 source:/home/krohn/LinguagemC/GLFW_Coordenadas_3D_Cubo/include/stb_image.cpp
-	"stb_image.h"
-
-1729124249 source:c:\projects\opengl-exercises\glfw_coordenadas_3d_cubo\include\stb_image.cpp
-	"stb_image.h"
-
-1729124249 c:\projects\opengl-exercises\glfw_coordenadas_3d_cubo\include\stb_image.h
-	"stb_image.h"
-	<stdio.h>
-	<stdlib.h>
-	<stdarg.h>
-	<stddef.h>
-	<stdlib.h>
-	<string.h>
-	<limits.h>
-	<math.h>
-	<stdio.h>
-	<assert.h>
-	<stdint.h>
-	<emmintrin.h>
-	<intrin.h>
-	<arm_neon.h>
-
-1729730572 source:c:\projects\opengl-exercises\glfw_coordenadas_3d_cubo\main.cpp
+1605624642 source:/home/krohn/LinguagemC/GLFW_Iluminacao_1/main.cpp
 	<GL/glew.h>
 	<GLFW/glfw3.h>
-	<stb_image.h>
 	<glm/glm.hpp>
 	<glm/gtc/matrix_transform.hpp>
 	<glm/gtc/type_ptr.hpp>
-	<Shader.h>
+	"shader_m.h"
+	"camera.h"
 	<iostream>
 
-1729124249 c:\projects\opengl-exercises\glfw_coordenadas_3d_cubo\include\shader.h
+1605555989 /home/krohn/LinguagemC/GLFW_Iluminacao_1/shader_m.h
 	<GL/glew.h>
 	<glm/glm.hpp>
 	<string>
@@ -78,42 +37,21 @@
 	<sstream>
 	<iostream>
 
-1584277261 c:\glew-2.2.0\include\gl\glew.h
-	<cstddef>
-	<cstdint>
-	<stddef.h>
-	<stdint.h>
-	<stddef.h>
-	<inttypes.h>
-	<stdint.h>
-	<inttypes.h>
-	<Availability.h>
-	<OpenGL/glu.h>
-	<GL/glu.h>
+1605555997 /home/krohn/LinguagemC/GLFW_Iluminacao_1/camera.h
+	<GL/glew.h>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<vector>
 
-1708700017 c:\glfw-3.4.bin.win64\include\glfw\glfw3.h
-	<stddef.h>
-	<stdint.h>
-	<vulkan/vulkan.h>
-	<GLES/gl.h>
-	<GLES/glext.h>
-	<GLES2/gl2.h>
-	<GLES2/gl2ext.h>
-	<GLES3/gl3.h>
-	<GLES2/gl2ext.h>
-	<GLES3/gl31.h>
-	<GLES2/gl2ext.h>
-	<GLES3/gl32.h>
-	<GLES2/gl2ext.h>
-	<OpenGL/gl3.h>
-	<OpenGL/gl3ext.h>
-	<GL/glcorearb.h>
-	<GL/glext.h>
-	<OpenGL/glu.h>
-	<GL/glu.h>
-	<OpenGL/gl.h>
-	<GL/gl.h>
-	<GL/glext.h>
+1731543197 source:c:\projects\opengl-exercises\glfw_iluminacao_1\main.cpp
+	<GL/glew.h>
+	<GLFW/glfw3.h>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<glm/gtc/type_ptr.hpp>
+	"shader_m.h"
+	"camera.h"
+	<iostream>
 
 1729124149 c:\glm\glm\glm.hpp
 	"detail/_fixes.hpp"
@@ -1017,4 +955,38 @@
 
 1729124153 c:\glm\glm\gtc\type_ptr.inl
 	<cstring>
+
+1731543197 c:\projects\opengl-exercises\glfw_iluminacao_1\shader_m.h
+	<GL/glew.h>
+	<glm/glm.hpp>
+	<string>
+	<fstream>
+	<sstream>
+	<iostream>
+
+1731543197 c:\projects\opengl-exercises\glfw_iluminacao_1\camera.h
+	<GL/glew.h>
+	<glm/glm.hpp>
+	<glm/gtc/matrix_transform.hpp>
+	<vector>
+
+1731543197 source:c:\projects\opengl-exercises\glfw_iluminacao_1\stb_image.cpp
+	"stb_image.h"
+
+1731543197 c:\projects\opengl-exercises\glfw_iluminacao_1\stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
 
